@@ -19,16 +19,6 @@ const products: ProductType[] = [
         section: "Category",
         link: ['Design', 'Mockup', 'View all', 'Log In']
     },
-    {
-        id: 3,
-        section: "Pages",
-        link: ['404', 'Instructions', 'License']
-    },
-    {
-        id: 4,
-        section: "Others",
-        link: ['Styleguide', 'Changelog']
-    }
 ]
 
 const footer = () => {
@@ -44,9 +34,6 @@ const footer = () => {
                         <div className='flex gap-4'>
                             <div className='footer-icons'>
                                 <Link href="https://facebook.com"><Image src={'/images/footer/vec.svg'} alt="facebook" width={15} height={20} /></Link>
-                            </div>
-                            <div className='footer-icons'>
-                                <Link href="https://twitter.com"><Image src={'/images/footer/twitter.svg'} alt="twitter" width={20} height={20} /></Link>
                             </div>
                             <div className='footer-icons'>
                                 <Link href="https://instagram.com"><Image src={'/images/footer/instagram.svg'} alt="instagram" width={20} height={20} /></Link>
