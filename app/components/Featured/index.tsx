@@ -60,7 +60,7 @@ export default class MultipleItems extends Component {
         const settings = {
             dots: false,
             infinite: true,
-            slidesToShow: 2,
+            slidesToShow: 3,
             // centerMode: true,
             slidesToScroll: 1,
             arrows: true,
@@ -70,6 +70,15 @@ export default class MultipleItems extends Component {
             prevArrow: <SamplePrevArrow className={undefined} style={undefined} onClick={undefined} />,
             cssEase: "linear",
             responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        dots: false
+                    }
+                },
                 {
                     breakpoint: 800,
                     settings: {
