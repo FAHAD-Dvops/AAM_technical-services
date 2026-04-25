@@ -59,7 +59,7 @@ const Contactusform = () => {
                                             </Link>
                                         </div>
                                         <p className="mb-8 lg:mb-16 mt-8 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">Contact Abdul Malik Technical Services</p>
-                                        
+
                                         <div className="space-y-8">
                                             <div className="border-b pb-6">
                                                 <h3 className="text-sm font-medium text-gray-900 mb-2">Email</h3>

@@ -346,7 +346,7 @@ html {
 
 @media only screen and (max-width: 1500px) {
   .slick-arrow {
-    display: none!important;
+    display: none !important;
   }
 }
 
@@ -383,15 +383,15 @@ html {
   display: block;
 }
 
-.manage > div:nth-child(2) {
-  background-color: #00224A!important;
+.manage>div:nth-child(2) {
+  background-color: #00224A !important;
   color: #ffffff;
 }
 
-.manage > div:nth-child(2) button {
+.manage>div:nth-child(2) button {
   color: #ffffff;
 }
 
-.manage > div:nth-child(2) h3 {
+.manage>div:nth-child(2) h3 {
   color: #747474;
 }
