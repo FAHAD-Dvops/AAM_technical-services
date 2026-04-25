@@ -1,0 +1,101 @@
+"use client"
+import { Dialog, Transition } from '@headlessui/react';
+import { Fragment, useState } from 'react';
+import Link from 'next/link';
+
+
+const Contactusform = () => {
+    let [isOpen, setIsOpen] = useState(false)
+
+    const closeModal = () => {
+        setIsOpen(false)
+    }
+
+    const openModal = () => {
+        setIsOpen(true)
+    }
+
+    return (
+        <>
+            <div className=" inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto md:ml-6 sm:pr-0">
+                <div className='hidden lg:block'>
+                    <button type="button" className='justify-end text-xl font-semibold bg-transparent py-4 px-6 lg:px-12 navbutton rounded-full hover:bg-navyblue hover:text-white' onClick={openModal}>
+                        Contact Us
+                    </button>
+                </div>
+            </div>
+
+            <Transition appear show={isOpen} as={Fragment}>
+                <Dialog as="div" className="relative z-50" onClose={closeModal}>
+                    <Transition.Child
+                        as={Fragment}
+                        enter="ease-out duration-300"
+                        enterFrom="opacity-0"
+                        enterTo="opacity-100"
+                        leave="ease-in duration-200"
+                        leaveFrom="opacity-100"
+                        leaveTo="opacity-0"
+                    >
+                        <div className="fixed inset-0 bg-black bg-opacity-25" />
+                    </Transition.Child>
+
+                    <div className="fixed inset-0 overflow-y-auto">
+                        <div className="flex min-h-full items-center justify-center p-4 text-center">
+                            <Transition.Child
+                                as={Fragment}
+                                enter="ease-out duration-300"
+                                enterFrom="opacity-0 scale-95"
+                                enterTo="opacity-100 scale-100"
+                                leave="ease-in duration-200"
+                                leaveFrom="opacity-100 scale-100"
+                                leaveTo="opacity-0 scale-95"
+                            >
+                                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+
+                                    <div className="py-8 lg:py-8 px-4 mx-auto max-w-screen-md">
+                                        <div className="flex flex-shrink-0 items-center justify-center">
+                                            <Link href="/" className='text-2xl sm:text-4xl font-semibold text-blue'>
+                                                AMT
+                                            </Link>
+                                        </div>
+                                        <p className="mb-8 lg:mb-16 mt-8 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">Contact Abdul Malik Technical Services</p>
+                                        
+                                        <div className="space-y-8">
+                                            <div className="border-b pb-6">
+                                                <h3 className="text-sm font-medium text-gray-900 mb-2">Email</h3>
+                                                <p className="text-lg font-semibold text-blue">info@abdulmaliktech.com</p>
+                                            </div>
+
+                                            <div className="border-b pb-6">
+                                                <h3 className="text-sm font-medium text-gray-900 mb-2">Phone</h3>
+                                                <p className="text-lg font-semibold text-blue">+971-04-2716464</p>
+                                            </div>
+
+                                            <div className="border-b pb-6">
+                                                <h3 className="text-sm font-medium text-gray-900 mb-2">Mobile</h3>
+                                                <p className="text-lg font-semibold text-blue">+971-50-5383062</p>
+                                            </div>
+
+                                            <div className="pb-6">
+                                                <h3 className="text-sm font-medium text-gray-900 mb-2">Address</h3>
+                                                <p className="text-lg font-semibold text-blue">Office No. 10A, Salah Al Ansari Building,<br /> Naif, Deira, Dubai, UAE</p>
+                                            </div>
+                                        </div>
+
+                                        <button type="button"
+                                            onClick={closeModal}
+                                            className="py-3 px-5 mt-8 text-sm font-medium w-full text-center text-white rounded-lg bg-blue hover:bg-btnblue focus:ring-4 focus:outline-none focus:ring-primary-300">Close</button>
+
+                                    </div>
+
+                                </Dialog.Panel>
+                            </Transition.Child>
+                        </div>
+                    </div>
+                </Dialog>
+            </Transition>
+        </>
+    )
+}
+
+export default Contactusform;
